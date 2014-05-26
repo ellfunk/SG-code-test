@@ -15,7 +15,7 @@ def say_goodbye(total):
     #driver.close()
     world.browser.close()  #Woo this one worked
     print "Congratulations, %d of %d scenarios passed!" % (
+        total.scenarios_passed,
         total.scenarios_ran,
-        total.scenarios_passed
     )
     print "Goodbye!"

@@ -14,3 +14,13 @@ def fill_in_textfield_by_class(step, field_name, value):
         text_field = find_field_by_class(world.browser, field_name)  
         text_field.clear()  
         text_field.send_keys(value) 
+
+# from pythonhosted.org lettuce tables tutorial
+from lettuce import step
+@step('I have the following pages in my database:')
+def pages_in_database(step):
+    for page_dict in step.hashes:
+        page = Page(**page_dict)
+	page.save
+
+
