@@ -36,13 +36,15 @@ Scenario: click Invest on realestate.com.au homepage
 
 Scenario: click Invest on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
-   When I click "Share"
+   When I click "Share"  # Trouble finding element name "Share"...
    Then The browser's URL should be "http://www.realestate.com.au/share"
 
 Scenario: click Invest on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
    When I click "New homes"
-   Then The browser's URL should be "http://www.realestate.com.au//new-homes/new-land+estates"
+   # Landing page seems to have changed: watch out for what's going on here
+   # Old landing page: Then The browser's URL should be "http://www.realestate.com.au/new-homes/new-land+estates"
+   Then The browser's URL should be "http://www.realestate.com.au/new-homes/new-house+land"
 
 Scenario: click Invest on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
@@ -51,19 +53,20 @@ Scenario: click Invest on realestate.com.au homepage
 
 Scenario: click Invest on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
-   When I click "Find agents"
+   When I click "Find agents"  #Hah - case of the link varies by calling page
+	# Trouble finding element by name "Find agents" ...
    Then The browser's URL should be "http://www.realestate.com.au/find-agent"
 
 
 Scenario: click Invest on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
    When I click "Home ideas"
-   Then The browser's URL should be "http://www.realestate.com.au/home-ideas"
+   Then The browser's URL should be "http://www.realestate.com.au/home-ideas/" #needs the trailing slash
 
 Scenario: click Invest on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
    When I click "Blog"
-   Then The browser's URL should be "http://www.realestate.com.au/blog"
+   Then The browser's URL should be "http://www.realestate.com.au/blog/" # needs the trailing slash
 
 #Commerical opens a new tab but leaves the original tab at the originating page...
 Scenario: click Invest on realestate.com.au homepage 
@@ -76,12 +79,12 @@ Scenario: click Invest on realestate.com.au homepage
 
 Scenario: click Invest on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
-   When I click "Sign in"
+   When I click "Sign in"  # Trouble finding element by name "Sign in"...
    Then The browser's URL should be "http://www.realestate.com.au/my-real-estate/login"
 
 Scenario: click Invest on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
-   When I click "Join"
+   When I click "Join"  # trouble finding element by name "Join"...
    Then The browser's URL should be "http://www.realestate.com.au/my-real-estate/register"
 
 
