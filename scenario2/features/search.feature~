@@ -1,0 +1,9 @@
+Feature: Search listings
+
+Scenario: Run a search on realestate.com.au
+    Given I go to "http://realestate.com.au/buy"
+    And I enter "Richmond, VIC" in "Where"
+    And I select "Apartment" in "Property Type"
+    And I select "500,000" in "Max Price"
+    When I click "Search"
+    Then I the browser's URL should 
