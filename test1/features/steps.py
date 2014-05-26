@@ -23,13 +23,7 @@ def pages_in_database(step):
         page = Page(**page_dict)
 	page.save
 
-@step(u'When I click the button ''')
-def when_i_click_the_button(step):
-    assert False, 'This step must be implemented'
 
-@step(u'Then The browser\'([^\']*)\''')
-def then_the_browsergroup1(step, group1):
-    assert False, 'This step must be implemented'
 
 
 

@@ -29,62 +29,70 @@ Scenario: click Invest on realestate.com.au homepage
    When I click "Invest"
    Then The browser's URL should be "http://www.realestate.com.au/invest"
 
-Scenario: click Invest on realestate.com.au homepage 
+Scenario: click Sold on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
    When I click "Sold"
    Then The browser's URL should be "http://www.realestate.com.au/sold"
 
-Scenario: click Invest on realestate.com.au homepage 
+Scenario: click Share on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
-   When I click "Share"  # Trouble finding element name "Share"...
+   When I click "Share"  
+# Trouble finding element name "Share"...
    Then The browser's URL should be "http://www.realestate.com.au/share"
 
-Scenario: click Invest on realestate.com.au homepage 
+Scenario: click New homes on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
    When I click "New homes"
    # Landing page seems to have changed: watch out for what's going on here
    # Old landing page: Then The browser's URL should be "http://www.realestate.com.au/new-homes/new-land+estates"
    Then The browser's URL should be "http://www.realestate.com.au/new-homes/new-house+land"
+   # Ah hah: the landing page rotates, got to partially match just "new-homes"
 
-Scenario: click Invest on realestate.com.au homepage 
+
+Scenario: click Retire on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
    When I click "Retire"
+# Trouble finding element by name "Retire"
    Then The browser's URL should be "http://www.realestate.com.au/retire"
 
-Scenario: click Invest on realestate.com.au homepage 
+Scenario: click Find agents on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
-   When I click "Find agents"  #Hah - case of the link varies by calling page
-	# Trouble finding element by name "Find agents" ...
+   When I click "Find agents"  
+#Hah - case of the link varies by calling page
+# Trouble finding element by name "Find agents" ...
    Then The browser's URL should be "http://www.realestate.com.au/find-agent"
 
 
-Scenario: click Invest on realestate.com.au homepage 
+Scenario: click Home ideas on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
    When I click "Home ideas"
-   Then The browser's URL should be "http://www.realestate.com.au/home-ideas/" #needs the trailing slash
+   Then The browser's URL should be "http://www.realestate.com.au/home-ideas/" 
+#needs the trailing slash
 
-Scenario: click Invest on realestate.com.au homepage 
+Scenario: click Blog on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
    When I click "Blog"
-   Then The browser's URL should be "http://www.realestate.com.au/blog/" # needs the trailing slash
+   Then The browser's URL should be "http://www.realestate.com.au/blog/" 
+# needs the trailing slash
 
 #Commerical opens a new tab but leaves the original tab at the originating page...
-Scenario: click Invest on realestate.com.au homepage 
+Scenario: click Commercial on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
    When I click "Commercial"
    Then The browser's URL should be "http://www.realestate.com.au/commercial"
 
 # Do "Sign In" and "Join" count as "main header links"?  Easy enough to add them...
 
-
-Scenario: click Invest on realestate.com.au homepage 
+Scenario: click Sign in on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
-   When I click "Sign in"  # Trouble finding element by name "Sign in"...
+   When I click "Sign in"  
+# Trouble finding element by name "Sign in"...
    Then The browser's URL should be "http://www.realestate.com.au/my-real-estate/login"
 
-Scenario: click Invest on realestate.com.au homepage 
+Scenario: click Join on realestate.com.au homepage 
   Given I go to "http://www.realestate.com.au"
-   When I click "Join"  # trouble finding element by name "Join"...
+   When I click "Join"  
+# trouble finding element by name "Join"...
    Then The browser's URL should be "http://www.realestate.com.au/my-real-estate/register"
 
 
