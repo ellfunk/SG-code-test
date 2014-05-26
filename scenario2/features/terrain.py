@@ -2,6 +2,7 @@
 from lettuce import before, world
 from selenium import webdriver
 import lettuce_webdriver.webdriver
+# from lettuce_webdriver import *
 
 @before.all
 def setup_browser():
@@ -12,10 +13,12 @@ from lettuce import *
 
 @after.all
 def say_goodbye(total):
-    #driver.close()
-    world.browser.close()  #Woo this one worked
+
     print "Congratulations, %d of %d scenarios passed!" % (
         total.scenarios_passed,
         total.scenarios_ran,
     )
     print "Goodbye!"
+
+    #driver.close()
+# don't close it, I wanna see:    world.browser.close()  #Woo this one worked
