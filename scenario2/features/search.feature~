@@ -10,9 +10,8 @@ Scenario: Run a search on realestate.com.au
     When I fill in "where" with "Richmond, VIC"
     And I uncheck "includeSurrounding"
 
+    And I check "apartment"
 #    When I click "area_VIC"
-  
-
 
 #    And I click "apartment" # Nope, it's not a link
 #    And I select "apartment" from "propertyType" # and it's not a select either
