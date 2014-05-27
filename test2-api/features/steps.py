@@ -14,3 +14,27 @@ def fill_in_textfield_by_class(step, field_name, value):
         text_field = find_field_by_class(world.browser, field_name)  
         text_field.clear()  
         text_field.send_keys(value) 
+
+# -*- coding: utf-8 -*-
+from lettuce import step
+
+@step(u'And I fill in x-smtpapi')
+def and_i_fill_in_x_smtpapi(step):
+        step.behave_as("""
+        Given I fill in "x-smtpapi" with "{xml}" 
+    """.format(xml='{"to": ["Lewis Funk <lew.funk@gmail.com>"]}'))
+
+@step(u'And I fill in html')
+def and_i_fill_in_html(step):
+        step.behave_as("""
+        Given I fill in "html" with "{htmlstuff}" 
+    """.format(htmlstuff='<html>Howdy</html>'))
+
+
+@step(u'And I fill in headers')
+def and_i_fill_in_headers(step):
+        step.behave_as("""
+        Given I fill in "headers" with "{headxml}"
+    """.format(headxml='{"X-Accept-Language":"en","X-Mailer":"MyApp"}'))
+
+
